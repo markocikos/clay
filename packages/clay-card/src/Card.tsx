@@ -68,7 +68,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 			<TagHeaderName
 				{...otherProps}
 				className={classNames(className, {
-					card: !selectable,
+					card: !selectable && (!horizontal || interactive),
 					'card-interactive card-interactive-primary card-type-template':
 						(horizontal && interactive) || interactive,
 					'card-type-asset':
